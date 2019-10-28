@@ -32,7 +32,7 @@ main() {
 			printf("%c: ", i);
 			for(j = 0; j < freq[i]; ++j)
 				putchar('-');
-			putchar('\n');
+			printf(" %d\%\n", freq[i]);
 		}
 }
 
