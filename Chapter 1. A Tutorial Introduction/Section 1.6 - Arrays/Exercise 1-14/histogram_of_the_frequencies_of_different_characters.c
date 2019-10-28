@@ -13,7 +13,7 @@ main() {
 	for(i = 0; i < 256; ++i)
 		freq[i] = 0;
 
-	/* fetch one character (until it reaches end of file
+	/* fetch one character (until it reaches end of file)
 	 * and increment its index in the array */
 	while((c = getchar()) != EOF) {
 		++freq[c];
