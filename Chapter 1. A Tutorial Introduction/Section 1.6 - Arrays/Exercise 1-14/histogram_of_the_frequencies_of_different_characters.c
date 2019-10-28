@@ -20,7 +20,7 @@ main() {
 		++ccount;
 	}
 
-	/* Divide each count by total count to get frequency */
+	/* calculate frequency of each character */
 	for(i = 0; i < 256; ++i) {
 		freq[i] *= 100;
 		freq[i] /= ccount;
