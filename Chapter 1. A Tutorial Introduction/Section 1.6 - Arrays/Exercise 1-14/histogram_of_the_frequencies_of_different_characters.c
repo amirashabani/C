@@ -8,6 +8,7 @@ main() {
 	int freq[256];	/* frequencies of each ASCII character */
 	int i, j;	/* index to traverse through arrays */
 	int ccount = 0;	/* count the number of characters in input */
+	float perc;	/* percentage to calculate frequency */
 
 	/* Initialize the array with 0 */
 	for(i = 0; i < 256; ++i)
@@ -20,19 +21,14 @@ main() {
 		++ccount;
 	}
 
-	/* calculate frequency of each character */
-	for(i = 0; i < 256; ++i) {
-		freq[i] *= 100;
-		freq[i] /= ccount;
-	}
-
 	/* print those frequencies that are not zero */
 	for(i = 0; i < 256; ++i)
 		if(freq[i] != 0) {
+			perc = (((float)freq[i]) / ccount) * 100;
 			printf("%c: ", i);
-			for(j = 0; j < freq[i]; ++j)
+			for(j = 0; j < (int)perc; ++j)
 				putchar('-');
-			printf(" %d\%\n", freq[i]);
+			printf(" %.2f%\n", i, perc);
 		}
 }
 
